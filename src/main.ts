@@ -5,13 +5,13 @@ import { AppConfigService } from './config/app/app-config.service';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  //Get app config
+  // Get app config for cors settings and starting the app.
   const appConfig: AppConfigService = app.get('AppConfigService');
 
-  await app.listen(appConfig.appPort, () => {
+  await app.listen(appConfig.port, () => {
     console.log(`
     ======================================================================================================
-        ${appConfig.appName} started at Port:${appConfig.appPort} in ENV:${appConfig.appEnv}
+        ${appConfig.name} started at Port:${appConfig.port} in ENV:${appConfig.env}
     ======================================================================================================
   `);
   }); // <------- From AppConfig
