@@ -6,7 +6,7 @@ export class AppConfigService {
   constructor(private configService: ConfigService) {}
 
   get env(): string {
-    return this.configService.get<string>('app.appEnv');
+    return this.configService.get<string>('app.env');
   }
 
   get name(): string {

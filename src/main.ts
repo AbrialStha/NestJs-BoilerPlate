@@ -11,7 +11,7 @@ async function bootstrap() {
   await app.listen(appConfig.port, () => {
     console.log(`
     ======================================================================================================
-        ${appConfig.name} started at Port:${appConfig.port} in ENV:${appConfig.env}
+        Name: [${appConfig.name}] - Port: [${appConfig.port}] - ENV: [${appConfig.env}]
     ======================================================================================================
   `);
   }); // <------- From AppConfig
