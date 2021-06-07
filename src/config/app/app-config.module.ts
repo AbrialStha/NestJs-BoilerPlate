@@ -14,6 +14,7 @@ import { AppConfigService } from './app-config.service';
           .default('dev'),
         APP_NAME: Joi.string().default('MY APP'),
         APP_PORT: Joi.number().default('3000'),
+        SENTRY_DSN: Joi.string().uri().default(''),
       }),
     }),
   ],

@@ -16,4 +16,8 @@ export class AppConfigService {
   get port(): number {
     return this.configService.get<number>('app.port');
   }
+
+  get sentryDsn(): string {
+    return this.configService.get<string>('app.sentryDsn');
+  }
 }
